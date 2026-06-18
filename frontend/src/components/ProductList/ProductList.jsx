@@ -1,13 +1,14 @@
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
+import useProductContext from "../../hooks/useProductContext";
 
-function ProductList({
-  products,
-  fetchProducts,
-}) {
+function ProductList() {
+  const { filteredProducts, fetchProducts } =
+    useProductContext();
+
   return (
     <div className="product-list">
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <ProductCard
           key={product._id}
           product={product}

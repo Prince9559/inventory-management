@@ -1,18 +1,12 @@
 import "./CategoryFilter.css";
+import useProductContext from "../../hooks/useProductContext";
 
-function CategoryFilter({
-  categories,
-  selectedCategory,
-  setSelectedCategory,
-}) {
+function CategoryFilter() {
+  const {categories,selectedCategory,setSelectedCategory,} = useProductContext();
+
   return (
     <div className="filter-container">
-      <select
-        value={selectedCategory}
-        onChange={(e) =>
-          setSelectedCategory(e.target.value)
-        }
-      >
+      <select value={selectedCategory}onChange={(e) =>setSelectedCategory(e.target.value)}>
         <option value="">All Categories</option>
 
         {categories.map((category, index) => (

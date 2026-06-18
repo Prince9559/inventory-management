@@ -1,9 +1,12 @@
-.filter-container {
-  margin-bottom: 20px;
+ .filter-container {
+  margin-bottom: 25px;
 }
 
 .filter-container select {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
 }

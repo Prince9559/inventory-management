@@ -1,6 +1,10 @@
 import "./SearchBar.css";
+import useProductContext from "../../hooks/useProductContext";
 
-function SearchBar({ searchTerm, setSearchTerm }) {
+function SearchBar() {
+  const { searchTerm, setSearchTerm } =
+    useProductContext();
+
   return (
     <div className="search-container">
       <input
