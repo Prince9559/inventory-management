@@ -1,0 +1,27 @@
+.product-form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-form-container h2 {
+  margin-bottom: 15px;
+}
+
+.product-form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-form-container input {
+  padding: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.product-form-container button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
