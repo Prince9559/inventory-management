@@ -8,6 +8,9 @@ function ProductProvider({ children }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
 
+  const [editProduct, setEditProduct] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
+
   const fetchProducts = async () => {
     try {
       const res = await API.get("/");
@@ -48,6 +51,11 @@ function ProductProvider({ children }) {
         selectedCategory,
         setSelectedCategory,
         fetchProducts,
+
+        editProduct,
+        setEditProduct,
+        isEditing,
+        setIsEditing,
       }}
     >
       {children}
